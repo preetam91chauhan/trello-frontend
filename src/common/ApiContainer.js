@@ -1,6 +1,6 @@
 import axios from "axios";
 const API_BASE_PATH =
-  process.env.REACT_API_BASE_PATH || "http://localhost:3000";
+  import.meta.env.REACT_API_BASE_PATH || "http://localhost:3000";
 
 export const RegisterUserApi = (data) =>
   axios({

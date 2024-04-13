@@ -1,10 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
-      Home
-      <p> lorem30</p>
+      <NavLink to="/login">login</NavLink>
     </div>
   );
 };
