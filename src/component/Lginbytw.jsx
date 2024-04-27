@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { LoginUserApi } from "../common/ApiContainer";
+import { useDispatch } from "react-redux";
+import { updateToken } from "../common/authSlice";
 
 const Lginbytw = () => {
   const intialvalue = {
@@ -12,6 +14,7 @@ const Lginbytw = () => {
   const [state, setState] = useState(intialvalue);
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState("");
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -27,6 +30,7 @@ const Lginbytw = () => {
     LoginUserApi({ ...state })
       .then((res) => {
         console.log("acc res", res);
+        dispatch(updateToken(res.data));
         if (res.status == 200) {
           navigate("/user-home");
         }
@@ -78,7 +82,7 @@ const Lginbytw = () => {
               >
                 <div>
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Your email
@@ -95,7 +99,7 @@ const Lginbytw = () => {
                 </div>
                 <div>
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Password
@@ -124,7 +128,7 @@ const Lginbytw = () => {
                     </div>
                     <div className="ml-3 text-sm">
                       <label
-                        for="remember"
+                        htmlFor="remember"
                         className="text-gray-500 dark:text-gray-300"
                       >
                         Remember me

@@ -17,6 +17,10 @@ import Lginbytw from "./component/Lginbytw";
 import Userhome from "./component/Userhome";
 import RegisterNew from "./component/RegisterNew";
 import LoginPage from "./component/Login/Login";
+import ForgetPasswordNew from "./component/ForgetPasswordNew";
+import Workspace from "./component/userNavbar/Workspace";
+import Recent from "./component/userNavbar/Recent";
+import Create from "./component/userNavbar/Create";
 
 function App() {
   return (
@@ -40,9 +44,21 @@ function App() {
         {/* <Route path="register" element={<SignUp />} /> */}
         <Route path="register" element={<RegisterNew />} />
 
-        <Route path="forgot-password" element={<ForgetPassword />} />
+        <Route path="forgot-password" element={<ForgetPasswordNew />} />
         <Route path="reset-password" element={<ResetPassword />} />
-        <Route path="user-home" element={<Userhome />} />
+        <Route path="user-home" element={<Userhome />}>
+          <Route path="workspace" element={<Workspace />} />
+          <Route path="home" element={<Home />} />
+
+          {/* <Route index element={<Workspace />} /> */}
+
+          <Route path="recent" element={<Recent />} />
+
+          {/* <Route path="create" element={<Create />} /> */}
+        </Route>
+        {/* <Route path="workspace" element={<Workspace />} /> */}
+
+        <Route path="create" element={<Create />} />
 
         <Route path="*" element={<Wrong />} />
       </Routes>
