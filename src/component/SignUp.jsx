@@ -34,7 +34,7 @@ const SignUp = () => {
 
   return (
     <>
-      <div style={{ display: "grid", justifyContent: "center" }}>
+      <div  style={{ display: "grid", justifyContent: "center" }}>
         <h2 style={{ color: "blueviolet" }}>THIS IS THE REGISTER PAGE </h2>
         <form
           style={{ display: "grid" }}

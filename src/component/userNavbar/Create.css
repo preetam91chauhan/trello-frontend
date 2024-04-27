@@ -1,0 +1,69 @@
+/* body{
+    margin: 0;
+}
+
+.textarea{
+    background-color: antiquewhite;
+} */
+
+.main{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container {
+    width: 28%; /* Set the width of the container */
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 10px; /* Add some padding */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add border radius */
+    height:200px;
+    
+  }
+  
+  /* CSS for the textarea */
+  .container textarea {
+    width: 92%; /* Set the width of the textarea to 100% of the container */
+    height: 130px; /* Set the height of the textarea */
+    padding: 10px; /* Add padding */
+    box-sizing: border-box; /* Include padding and border in the textarea's total width and height */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add border radius */
+    resize: vertical; /* Allow vertical resizing */
+    font-size: 16px; /* Set font size */
+    
+
+  }
+  /* Base styles for the button */
+button {
+    display: inline-block; /* Make the button inline block */
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove default underline */
+    cursor: pointer; /* Set cursor to pointer */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #4CAF50; /* Set background color */
+    color: white; /* Set text color */
+  }
+  
+  /* Hover effect */
+  button:hover {
+    background-color: #45a049; /* Darker background color on hover */
+  }
+  
+  /* Active state */
+  button:active {
+    background-color: #3e8e41; /* Darker background color when button is clicked */
+  }
+  
+  /* Disabled state */
+  button:disabled {
+    background-color: #cccccc; /* Light gray background color when button is disabled */
+    color: #666666; /* Dark gray text color when button is disabled */
+    cursor: not-allowed; /* Set cursor to not-allowed when button is disabled */
+  }
+  
